@@ -1,3 +1,4 @@
+exports.homeTemplate = `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
       href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../content/styles/site.css" />
+    <link rel="stylesheet" href="/styles/site.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -122,3 +123,13 @@
     </main>
   </body>
 </html>
+`
+exports.catTemplate = `<li>
+<img src="{{imageUrl}}" alt="{{catName}}" />
+<h3>{{catName}}</h3>   
+<p><span>Breed: </span>{{breed}}</dp>
+<p><span>Description: </span>{{description}}</p>
+<ul class="buttons">
+  <li class="btn edit"><a href="">Change Info</a></li>
+  <li class="btn delete"><a href="">New Home</a></li>
+</ul>`

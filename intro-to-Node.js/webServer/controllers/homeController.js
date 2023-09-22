@@ -1,6 +1,6 @@
 const { html } = require('../util')
 
-function homePage(res, req) {
+function homePage(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' })
     res.write(html(`
     <h1>Welcome to our site!</h1>
@@ -10,8 +10,7 @@ function homePage(res, req) {
 }
 
 
-
-function aboutPage(res, req) {
+function aboutPage(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' })
     res.write(html(`
     <h1>About Page</h1>
@@ -21,7 +20,7 @@ function aboutPage(res, req) {
 }
 
 
-function defaultPage(res, req) {
+function defaultPage(req, res) {
     res.statusCode = 404
     res.write(html(`
     <h1>404 Not Found</h1>

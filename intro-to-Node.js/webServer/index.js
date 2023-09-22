@@ -1,34 +1,16 @@
-
-
 // import http from 'http'; -> is the same!
 const http = require('http')
-const { homePage, aboutPage, defaultPage } = require('./controllers/homeController')
+const router = require('./router')
 const { catalogPage } = require('./controllers/catalogController')
-
-
+const { homePage, aboutPage, defaultPage } = require('./controllers/homeController')
 const port = 5000
 
-const server = http.createServer((req, res) => {
-    console.log(req.method, req.url, req.headers);
+router.register('/', homePage)
+router.register('/about', aboutPage)
+router.register('/catalog', catalogPage)
+router.register('default', defaultPage)
 
-    const url = new URL(req.url, `http://${req.headers.host}`)
-
-    const routes = {
-        '/': homePage,
-        '/about': aboutPage,
-        '/catalog': catalogPage
-    }
-
-    const handler = routes[url.pathname]
-
-    if (typeof handler == 'function') {
-        handler(res, req)
-
-    } else {
-        defaultPage(res, req)
-    }
-
-})
+const server = http.createServer(router.match)
 
 server.listen(port)
 console.log(`Server listing port: ${port}`);

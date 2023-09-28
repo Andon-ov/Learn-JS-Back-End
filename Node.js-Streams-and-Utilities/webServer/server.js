@@ -14,6 +14,7 @@ const server = http.createServer((req, res) => {
         })
         req.on('end', () => {
             console.log(body.join(''));
+            res.write("OK")
             res.end()
         })
     }

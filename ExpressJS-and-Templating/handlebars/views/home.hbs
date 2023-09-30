@@ -1,0 +1,28 @@
+<h1>{{message}}</h1>
+<p>{{response}}</p>
+
+{{!-- If --}}
+{{#if username}}
+<p>Username: {{username}}</p>
+{{else}}
+{{!-- Else --}}
+<p>Guest user</p>
+{{/if}}
+
+{{#with product}}
+<div>
+    <ul>
+        <li>Name: {{name}}</li>
+        <li>Price: {{price}}</li>
+        <li>Color: {{color}}</li>
+    </ul>
+</div>
+{{/with}}
+
+<ul>
+    {{!-- for --}}
+    {{#each contacts}}
+    {{!-- Partials --}}
+    {{>userCard}}
+    {{/each}}
+</ul>

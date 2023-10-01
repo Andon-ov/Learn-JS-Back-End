@@ -2,6 +2,11 @@ const express = require('express');
 const hbr = require('express-handlebars');
 const PORT = 3000;
 
+const homeController = require('./controllers/homeController');
+const catalogController = require('./controllers/catalogController');
+const createController = require('./controllers/createController');
+
+
 const handlebars = hbr.create({
     extname: '.hbs'
 });
@@ -10,37 +15,11 @@ const app = express();
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
 
-app.get('/', (req, res) => {
-    // we can use res.locals 
-    res.locals.message = 'Hello There';
-    res.locals.response = 'General Kenobi';
-    res.locals.username = 'Ivan';
+app.use('/static', express.static('static'));
 
 
-    // or context object to send data to template
-    res.render('home', {
-        title: 'Handlebars Demo',
-        product: {
-            name: 'Product 1',
-            price: '250',
-            color: 'blue'
-        },
-        contacts: [
-            {
-                name: 'Peter',
-                email: 'peter@abv.bg'
-            },
-            {
-                name: 'Ivan',
-                email: 'ivan@abv.bg'
-            },
-            {
-                name: 'Andon',
-                email: 'andon@abv.bg'
-            },
-        ]
-    });
-});
-
+app.use(homeController);
+app.use('/catalog', catalogController);
+app.use('/create', createController);
 
 app.listen(PORT, console.log(`Server run on port: ${PORT}`));    

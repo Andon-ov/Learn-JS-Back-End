@@ -5,10 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 
 <body>
-    {{{body}}}
+    <nav>
+        <ul class="nav__ul">
+            <li class="nav__li"><a href="/">Home</a></li>
+            <li class="nav__li"><a href="/catalog">Catalog</a></li>
+            <li class="nav__li"><a href="/about">About</a></li>
+            <li class="nav__li"><a href="/create">Create</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        {{{body}}}
+    </div>
 </body>
 
 </html>

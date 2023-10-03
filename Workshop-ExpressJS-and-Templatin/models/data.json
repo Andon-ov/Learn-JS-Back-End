@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1234",
+    "name": "Room 1",
+    "description": "Nice and cozy",
+    "city": "Bansko",
+    "beds": 2,
+    "price": 130
+  },
+  {
+    "id": "5678",
+    "name": "Room 2",
+    "description": "Mountain View",
+    "city": "Sofia",
+    "beds": 3,
+    "price": 150
+  },
+  {
+    "id": "9012",
+    "name": "Room 3",
+    "description": "Downtown Retreat",
+    "city": "Plovdiv",
+    "beds": 2,
+    "price": 175
+  },
+  {
+    "id": "3456",
+    "name": "Room 4",
+    "description": "Seaside Getaway",
+    "city": "Varna",
+    "beds": 4,
+    "price": 120
+  },
+  {
+    "id": "7890",
+    "name": "Room 5",
+    "description": "Urban Oasis",
+    "city": "Sofia",
+    "beds": 2,
+    "price": 160
+  },
+  {
+    "id": "2345",
+    "name": "Room 6",
+    "description": "Historic Charm",
+    "city": "Veliko Tarnovo",
+    "beds": 3,
+    "price": 140
+  },
+  {
+    "id": "6789",
+    "name": "Room 7",
+    "description": "Countryside Retreat",
+    "city": "Plovdiv",
+    "beds": 2,
+    "price": 180
+  },
+  {
+    "id": "1235",
+    "name": "Room 8",
+    "description": "Beachside Paradise",
+    "city": "Burgas",
+    "beds": 4,
+    "price": 190
+  },
+  {
+    "id": "5679",
+    "name": "Room 9",
+    "description": "Modern Elegance",
+    "city": "Sofia",
+    "beds": 3,
+    "price": 125
+  },
+  {
+    "id": "9013",
+    "name": "Room 10",
+    "description": "Forest Hideaway",
+    "city": "Varna",
+    "beds": 2,
+    "price": 170
+  }
+]
